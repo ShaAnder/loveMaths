@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             // check the buttons data type
             if (this.getAttribute("data-type") === "submit") {
-                alert("You clicked submit!");
+                // check our answer
+                checkAnswer();
             } else {
                 let gameType = this.getAttribute("data-type");
                 // run our game

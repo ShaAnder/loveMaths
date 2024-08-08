@@ -21,6 +21,16 @@ document.addEventListener("DOMContentLoaded", function() {
             };
         });
     };
+
+    // ux allow user to use enter keys
+    document.getElementById("answer-box").addEventListener("keydown", function(event) {
+        if(event.key === "Enter") {
+            checkAnswer();
+        }
+    })
+
+    // runs default game addition
+    runGame("addition")
 });
 
 // button event listeners
@@ -39,6 +49,7 @@ function runGame(gameType) {
 
     // ux - set focus for user experience
     document.getElementById("answer-box").focus();
+
 
     // now we get our numbers
     let num1 = Math.floor(Math.random() * 25) + 1;

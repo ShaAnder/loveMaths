@@ -2,8 +2,22 @@
 
 // Dom content loaded listener
 document.addEventListener("DOMContentLoaded", function() {
-    
-})
+    // get all our buttons
+    let buttons = document.getElementsByTagName("button");
+    // iterate through the buttons
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            // check the buttons data type
+            if (this.getAttribute("data-type") === "submit") {
+                alert("You clicked submit!");
+            } else {
+                let gameType = this.getAttribute("data-type");
+                alert(`You clicked ${gameType}`);
+
+            };
+        });
+    };
+});
 
 // button event listeners
 

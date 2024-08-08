@@ -66,9 +66,11 @@ function checkAnswer() {
     if (isCorrect) {
         // throw alert to tell user correct
         alert("Correct!");
+        incrementScore()
     } else {
         // throw an alert to tell user wrong answer
         alert(`You answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
+        incrementWrongAnswer()
     }
 
     // run the game

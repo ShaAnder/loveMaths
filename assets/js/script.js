@@ -115,7 +115,7 @@ function calculateCorrectAnswer() {
     } else if (operator === "-") {
         return [operand1 - operand2, "subtract"];
     } else if (operator === "/") {
-        return [operand1 - operand2, "divide"];
+        return [(operand1 / operand2), "division"];
     } else {
         // throw an alert / error to stop game
         alert(`Unimplemented operator ${operator}`);
@@ -172,8 +172,8 @@ function displayMultiplyQuestion(operand1, operand2) {
 }
 
 function displayDivisionQuestion(operand1, operand2) {
-    document.getElementById('operand1').textContent = operand1;
-    document.getElementById('operand2').textContent = operand2;
+    document.getElementById("operand1").textContent = operand1 * operand2;
+    document.getElementById("operand2").textContent = operand2;
     document.getElementById('operator').textContent = "/";
 
 }

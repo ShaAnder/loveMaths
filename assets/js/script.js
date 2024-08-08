@@ -37,6 +37,9 @@ function runGame(gameType) {
     // ux - remove the text from box on submit
     document.getElementById("answer-box").value = "";
 
+    // ux - set focus for user experience
+    document.getElementById("answer-box").focus();
+
     // now we get our numbers
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;

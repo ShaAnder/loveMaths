@@ -33,6 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
  * after every answer is processed
  */
 function runGame(gameType) {
+
+    // ux - remove the text from box on submit
+    document.getElementById("answer-box").value = "";
+
     // now we get our numbers
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
